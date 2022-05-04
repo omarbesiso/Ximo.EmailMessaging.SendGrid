@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <FileVersion>2.0.0.0</FileVersion>
+    <FileVersion>2.0.1.0</FileVersion>
     <RepositoryUrl>https://github.com/omarbesiso/Ximo.EmailMessaging.SendGrid</RepositoryUrl>
     <PackageIcon>ximo_icon.png</PackageIcon>
     <Copyright>Copyright Omar Besiso</Copyright>
@@ -13,7 +13,7 @@
     <PackageProjectUrl>https://github.com/omarbesiso/Ximo.EmailMessaging.SendGrid</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <SignAssembly>False</SignAssembly>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>Omar Besiso</Authors>
     <Company>Omar Besiso</Company>
     <Product>Ximo Toolset</Product>
@@ -22,12 +22,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
     <PackageReference Include="SendGrid" Version="9.27.0" />
     <PackageReference Include="Ximo.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="Ximo.EmailMessaging" Version="2.0.0" />
-    <PackageReference Include="Ximo.Utilities" Version="2.0.0" />
+    <PackageReference Include="Ximo.Utilities" Version="2.0.2" />
   </ItemGroup>
 
 
