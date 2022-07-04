@@ -23,7 +23,7 @@ internal class SendGridEmailService : IEmailService
         var sender = new EmailAddress(Options.DefaultSenderEmail, Options.DefaultSenderName);
         var recipient = new EmailAddress(email);
 
-        await SendEmailAsync(subject, sender, new List<EmailAddress> {recipient}, htmlMessage);
+        await SendEmailAsync(subject, sender, new List<EmailAddress> { recipient }, htmlMessage);
     }
 
     public async Task<bool> SendEmailAsync(string subject, EmailAddress senderEmail,
@@ -52,7 +52,7 @@ internal class SendGridEmailService : IEmailService
         if (ccRecipients.IsNotNullOrEmpty())
         {
             // ReSharper disable once PossibleMultipleEnumeration
-            foreach (var ccEmailAddress in ccRecipients!)
+            foreach (var ccEmailAddress in ccRecipients)
             {
                 msg.AddCc(ccEmailAddress.ToSendGridEmailAddress());
             }
@@ -62,7 +62,7 @@ internal class SendGridEmailService : IEmailService
         if (bccRecipients.IsNotNullOrEmpty())
         {
             // ReSharper disable once PossibleMultipleEnumeration
-            foreach (var bccEmailAddress in bccRecipients!)
+            foreach (var bccEmailAddress in bccRecipients)
             {
                 msg.AddBcc(bccEmailAddress.ToSendGridEmailAddress());
             }
